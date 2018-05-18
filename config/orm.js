@@ -2,31 +2,33 @@ var connection = require('./connection.js');
 
 var orm = {
 
-    all: function (tableInput, cb) {
-        connection.query('SELECT * FROM ' + tableInput + ';', function (err, result) {
+    all: function (tableInput, orderBy, cb) {
+        var queryString = "SELECT * FROM ?? ORDER BY ?? asc";
+        connection.query(queryString, [tableInput, orderBy], function (err, res) {
             if (err) throw err;
-            cb(result)
-        })
+            cb(res)
+        });
+    },
+
+    create: function (tableInput, val, cb) {
+        var queryString = "INSERT INTO ?? ( ??) VALUES (?) ";
+        connection.query(queryString, [tableInput, val], function (err, result) {
+            if (err) throw err;
+            cb(result);
+        });
     },
 
     update: function (tableInput, condition, cb) {
-        connection.query('UPDATE ' + tableInput + ' SET devoured=true WHERE id=' + condition + ';',
-            function (err, result) {
-                if (err) throw err;
-                cb(result);
-            })
-    
-    },
-
-    create: function(tableInput, val, cb){
-        connection.query('INSERT INTO ' +tableInput+ " (burger_name) VALUES ('"+val+"');",
-    function(err,result) {
-        if(err) throw err;
-        cb(result);
-    })
+    var queryString ="UPDATE ?? SET ?? = ? WHERE id = ?";
+connection.query(queryString, [tableInput, condition],
+    function (err, result) {
+        if (err) throw err;
+        cb(result)
     }
-
+);
 }
+
+};
 
 module.exports = orm;
 

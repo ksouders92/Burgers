@@ -22,7 +22,10 @@
     "express": "^4.16.3",
     "express-handlebars": "^3.0.0",
     "handlebars": "^4.0.11",
+    "inspect": "0.0.2",
     "method-override": "^2.3.10",
-    "mysql": "^2.15.0"
+    "mysql": "^2.15.0",
+    "node": "^10.0.0",
+    "node-inspect": "^1.11.3"
   }
 }

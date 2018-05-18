@@ -7,13 +7,18 @@ var burger = {
         })
     }, 
 
-    update: function(id, cb){
-        orm.update('burgers', id, cb);
+    create: function(name, cb){
+        orm.create('burgers', name, cb, function (res){
+            cb(res);
+        });
     },
 
-    create: function(name, cb){
-        orm.create('burgers', name, cb);
+    update: function(id, cb){
+        orm.update('burgers', id, cb, function (res){
+            cb(res);
+        });
     }
-}
+
+};
 
 module.exports = burger;

@@ -8,16 +8,13 @@ var burger = {
     }, 
 
     create: function(name, cb){
-        orm.create('burgers', name, cb, function (res){
-            cb(res);
-        });
-    },
+        orm.create('burgers', name, cb);
+
+        },
 
     update: function(id, cb){
-        orm.update('burgers', id, cb, function (res){
-            cb(res);
-        });
-    }
+        orm.update('burgers', id, cb); 
+        }
 
 };
 

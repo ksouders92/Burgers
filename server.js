@@ -25,6 +25,11 @@ app.set('view engine', 'handlebars');
 var routes = require('./controllers/routes.js');
 app.use("/", routes);
 
+// app.get("/js", function (req, res){
+//     res.sendFile(path.join(__dirname, '../public/assets/JS/onClick.js'));
+  
+//   })
+
 // Start our server so that it can begin listening to client requests.
 app.listen(PORT, function() {
     // Log (server-side) when our server has started

@@ -1,10 +1,10 @@
 //Callbacks
 $("#newBurger").on("click", function () {
-    var burgerName = $("#burgername").val().trim()
+    var burgerName = $("#burger_name").val().trim()
     if (burgerName != "") {
-        querystring = "/api/newburger"
+        querystring = "/burgers/create"
         $.post(querystring, {
-                name: burgerName
+                name: burger_Name
             },
             function (data) {
                 

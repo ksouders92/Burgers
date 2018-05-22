@@ -2,7 +2,7 @@
 
     <div class="headerContainer">
         <div class="row">
-            <div class="col-lg-12 text center" id="headerImg">
+            <div class="headerImg">
 
             </div>
         </div>
@@ -13,8 +13,9 @@
         <div class="row">
             <div class="col-lg-4 text center">
                 <div class="container">
-                    <h3>Bob's Favorite Cheesiest Burgers of the Day</h3>
-                    <p>Which one of these fan favorites would you like to devour first?</p>
+                    <h3>Burgers of the Day</h3>
+                    <hr>
+                    <p>Which one of these cheesy fan favorites would you like to devour first?</p>
 
                     <hr> {{#each burger_data}} {{#unless this.devoured}} {{this.burger_name}}
 

@@ -3,7 +3,7 @@ body {
     background-position: right bottom;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-color: #f8d442f5;
+    background-color:  #ffd633;
 
 }
 
@@ -11,8 +11,15 @@ body {
     padding-top: 20px;
 }
 
-h1, h2, h3 {
+h3 {
     color: #e60000;
+    font-family: 'Indie Flower', cursive;
+    font-size: 35px;
+}
+
+p{
+    font-family: 'Indie Flower', cursive;
+    font-style: oblique;
 }
 
 header {
@@ -26,5 +33,6 @@ header {
 
 .btn-primary {
     background-color: #e60000;
-    color: #f8d442f5;
+    color: #ffd633;
 }
+

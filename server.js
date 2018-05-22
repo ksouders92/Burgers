@@ -16,7 +16,6 @@ app.use(bodyParser.urlencoded({
     extended: false
 }));
 
-app.use(favicon(path.join(__dirname,'public', 'assets', 'images','favicon.jpg')));
 
 app.use(methodOverride('__method'));
 app.engine('handlebars', exphbs({

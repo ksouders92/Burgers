@@ -1,0 +1,32 @@
+body {
+    background-image: url("http://fanart.tv/fanart/tv/194031/clearart/BobsBurgers-194031-2.png");
+    background-position: right bottom;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.mainContainer {
+    padding-top: 20px;
+}
+
+.imgHere{
+    background-image: url("../images/header.png")
+}
+
+h1, h2, h3 {
+    color: #e60000;
+}
+
+#headerImg {
+    text-align:  center;
+    border-style: inset;
+    border-color: black;
+    border-radius: 5px;
+    background-color: #ffdb4d;
+    margin: 10px;
+}
+
+.btn-primary {
+    background-color: #e60000;
+    color: #ffdb4d;
+}
